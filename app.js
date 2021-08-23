@@ -1,3 +1,4 @@
+var t0 = performance.now()
 
 const form = document.querySelector('form');        //Retrieves the form node
 const para = document.querySelector('p');           //Retreieves the paragraph node
@@ -70,8 +71,6 @@ function convertWord(letter, len, city) {
     }
     para.innerHTML = finalString.charAt(0).toUpperCase() + finalString.slice(1)+" Rupees only";
 }
-var t1 = performance.now()
-console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
 
 let speech = new SpeechSynthesisUtterance();
 
@@ -81,4 +80,5 @@ document.querySelector("svg").addEventListener("click", () => {
   });
 
 
- 
+  var t1 = performance.now()
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
